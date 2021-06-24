@@ -7,6 +7,7 @@ import {
 
 import { Dashboard } from "../screens";
 import { COLORS, FONTS, icons } from "../constants";
+import { TabBarIcon } from "../components";
 
 const Tab = createBottomTabNavigator();
 
@@ -32,22 +33,7 @@ const Tabs = () => {
         component={Dashboard}
         options={{
           tabBarIcon: ({ focused }) => (
-            <View
-              style={{
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Image
-                source={icons.maps}
-                resizeMode="contain"
-                style={{
-                  width: 30,
-                  height: 30,
-                  tintColor: focused ? COLORS.blue : COLORS.gray,
-                }}
-              />
-            </View>
+            <TabBarIcon focused={focused} icon={icons.maps} />
           ),
         }}
       />
@@ -56,17 +42,7 @@ const Tabs = () => {
         component={Dashboard}
         options={{
           tabBarIcon: ({ focused }) => (
-            <View style={{ alignItems: "center", justifyContent: "center" }}>
-              <Image
-                source={icons.bookmark}
-                resizeMode="contain"
-                style={{
-                  width: 30,
-                  height: 30,
-                  tintColor: focused ? COLORS.blue : COLORS.gray,
-                }}
-              />
-            </View>
+            <TabBarIcon focused={focused} icon={icons.bookmark} />
           ),
         }}
       />
@@ -75,17 +51,7 @@ const Tabs = () => {
         component={Dashboard}
         options={{
           tabBarIcon: ({ focused }) => (
-            <View style={{ alignItems: "center", justifyContent: "center" }}>
-              <Image
-                source={icons.calendar}
-                resizeMode="contain"
-                style={{
-                  width: 30,
-                  height: 30,
-                  tintColor: focused ? COLORS.blue : COLORS.gray,
-                }}
-              />
-            </View>
+            <TabBarIcon focused={focused} icon={icons.calendar} />
           ),
         }}
       />
@@ -94,17 +60,7 @@ const Tabs = () => {
         component={Dashboard}
         options={{
           tabBarIcon: ({ focused }) => (
-            <View style={{ alignItems: "center", justifyContent: "center" }}>
-              <Image
-                source={icons.plane}
-                resizeMode="contain"
-                style={{
-                  width: 30,
-                  height: 30,
-                  tintColor: focused ? COLORS.blue : COLORS.gray,
-                }}
-              />
-            </View>
+            <TabBarIcon focused={focused} icon={icons.plane} />
           ),
         }}
       />
